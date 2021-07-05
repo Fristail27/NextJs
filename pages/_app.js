@@ -1,7 +1,10 @@
-import '../styles/globals.css'
+import React from "react";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+  const [isLoading, setIsLoading] = React.useState(true)
+
+  return <Component isLoading={isLoading} setIsLoading={setIsLoading} {...pageProps} />
 }
 
 export default MyApp
