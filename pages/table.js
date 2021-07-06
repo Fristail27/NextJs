@@ -38,6 +38,9 @@ export default function TablePage({user, setIsLoading, isLoading, jsonContext}) 
     const [page, setPage] = React.useState(1)
     const [data, setData] = React.useState(user)
 
+    const router = useRouter()
+    console.log(router)
+
     const onChangePage = async (obj) => {
         setPage(obj.current)
         setIsLoading(true)
